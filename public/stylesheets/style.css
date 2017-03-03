@@ -2,10 +2,14 @@ body{
 
 }
 
+.profile-link{
+	text-align: center;
+	font-size: 22px;
+}
+
 .index-profile-image{
 	position: absolute;
 	height: 75px;
-
 }
 
 .card-deck{

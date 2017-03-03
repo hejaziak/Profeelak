@@ -8,6 +8,7 @@ var workSchema = new Schema({
 	
 			username : { type: Schema.Types.ObjectId, ref: 'User'},
             name: { type: String, required: true },
+            link: String,
             info: String,
             screenshots: [ String ]
             

@@ -4,10 +4,11 @@
 <form action="/create" method="post" enctype="multipart/form-data">
   <input name="name" type="text" class="form-control"
      placeholder="Name / Link" required autofocus>
+  <input name="link" type="text" class="form-control"
+     placeholder="Link for this project" >
   <input name="info" type="text" class="form-control"
-     placeholder="Information about this project" required> <br>
-  <br>
-  <input name="photos" type="file" class="form-control"  placeholder="choose an image" accept="image/*" multiple>
+     placeholder="Information about this project" required> 
+  <input name="photos" type="file" class="form-control"  placeholder="choose images" accept="image/*" multiple>
    <br>
   <input type="submit" value="create" class="btn btn-primary btn-block">
 </form>

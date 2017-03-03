@@ -134,23 +134,17 @@ function diff (a1, a2) {
 router.post("/:name/update", upload.array('photos', 12), function(req, res) {
 
  Work.findOne({ name: req.params.name }).exec(function(err,result){
-      result.name= req.body.name;
+      result.name = req.body.name;
       result.info = req.body.info;
+      result.link = req.body.link; 
 
       var list = [];
-
-
-
-
 
     for (var i = 0; i < req.files.length; i++) {
 
       list.push(req.files[i].filename);
 
     }; 
-
-    
-
       
     for (var i = 0; i < list.length; i++) {
 

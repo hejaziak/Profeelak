@@ -10,6 +10,13 @@
  <img src="/<%= work.screenshots[0] %>"  class="img-responsive " width="100" height="150" >
   <h1 class="profile-name"> <%= work.name %> </h1>
 
+
+  <% if (work.link) { %>
+  <div class="profile-link">
+  <a href="http://<%= work.link %>" class="profile-link"><%= work.link %></a>
+</div>
+<% } %>
+
 <% if (work.info) { %>
   <p class="profile-bio"><%= work.info %></p>
 <% } %>
