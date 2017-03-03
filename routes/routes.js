@@ -25,6 +25,10 @@ router.use(function(req, res, next) {
   next();
 });
 
+router.get("/",function(req,res,next){
+  res.redirect("/page/1");
+});
+
 function getPaginatedItems(items, page) {
   var page = page || 1,
       per_page = 10,
