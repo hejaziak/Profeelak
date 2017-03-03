@@ -1,8 +1,7 @@
 
 var express = require("express");
-var User = require("/Users/Hejazi/Desktop/sa/models/user.js");
-var Works = require("/Users/Hejazi/Desktop/sa/models/works.js");
-var Screenshot = require("/Users/Hejazi/Desktop/sa/models/screenshots.js");
+var User = require("../models/user.js");
+var Works = require("../models/works.js");
 var passport = require("passport");
 var multer = require("multer");
 var fs = require("fs");

@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-var Work = require("/Users/Hejazi/Desktop/sa/models/works.js");
+var Work = require("./works.js");
 var mongoosePaginate = require('mongoose-paginate');
 
 //Requiring bcrypt

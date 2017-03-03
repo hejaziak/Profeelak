@@ -1,6 +1,5 @@
 var mongoose = require("mongoose");
-var User = require("/Users/Hejazi/Desktop/sa/models/user.js");
-var Screenshot = require("/Users/Hejazi/Desktop/sa/models/screenshots.js");
+var User = require("./user.js");
 
 var Schema = mongoose.Schema;
 

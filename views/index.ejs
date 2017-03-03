@@ -7,7 +7,9 @@
 <% users.forEach(function(user) { %>
   <div class="panel panel-default"style="width: 90%;">
     <div class="panel-heading">
-      <img class="index-profile-image"src="/<%= user.profilePicture() %>" alt="Card image cap" >
+      <% if (user.profilePic) { %>
+      <img class="index-profile-image"src="/<%= user.profilePicture() %>" alt="http://www.hbc333.com/data/out/190/47199326-profile-pictures.png" >
+      <% } %>
       <h2  class="profile-name"> 
         <%= user.name() %>
       </h2> 
