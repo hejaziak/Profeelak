@@ -1,0 +1,14 @@
+<html>
+<% include header %>
+<h1>Edit your Work</h1>
+<form action="update" method="post" enctype="multipart/form-data">
+  <input name="name" type="text" class="form-control"
+     placeholder="Name / Link" required autofocus>
+  <input name="info" type="text" class="form-control"
+     placeholder="Information about this project" required> <br>
+  <br>
+  <input name="photos" type="file" class="form-control"  placeholder="choose an image" accept="image/*" multiple>
+   <br>
+  <input type="submit" value="update" class="btn btn-primary btn-block">
+</form>
+<% include footer %>

@@ -1,0 +1,46 @@
+<html>
+<% include header %>
+
+
+<% if ((currentUser) && (currentUser.id ==user)) { %>
+  <a href="/<%= work.name %>/update" class="pull-right">Edit your work</a> <br/>
+  <a href="/delete/<%= work.name %>" class="pull-right">Delete</a> <br/>
+
+<% } %>
+ <img src="/<%= work.screenshots[0] %>"  class="img-responsive " width="100" height="150" >
+  <h1 class="profile-name"> <%= work.name %> </h1>
+
+<% if (work.info) { %>
+  <p class="profile-bio"><%= work.info %></p>
+<% } %>
+
+
+
+<div class="container">
+  <h2>Screenshots</h2>
+  <div class="row">
+    <div class="card-deck" style="width: 100%; height=10px">
+
+  	<% for(var i=1; i<=work.screenshots.length; i++) {%>
+   	    <div class="col-md-4 col-lg-4 col-xs-4">
+            <div class="card" >
+              <img class="card-img-top" src="/<%= work.screenshots[i-1] %>" alt="Card image cap" height="30%">
+              
+              <div class="card-block">
+                  <h3 class="card-title"> Screenshot #<%= i %> </h3>
+
+              </div>
+            </div>
+
+          </div>
+
+          
+	  <% } %>
+    </div>
+
+
+  </div>
+</div>
+
+
+<% include footer %>
