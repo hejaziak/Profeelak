@@ -152,8 +152,6 @@ var upload = multer({ storage: storage});
 
 router.post("/edit", upload.single('userPhoto'),  function(req, res, next) {
 
-
-
   req.user.displayName = req.body.displayname;
   req.user.bio = req.body.bio;
 

@@ -1,7 +1,7 @@
 <html>
 <% include header %>
 <h1>Create work</h1>
-<form action="/create" method="post">
+<form action="/create" method="post" enctype="multipart/form-data">
   <input name="name" type="text" class="form-control"
      placeholder="Name / Link" required autofocus>
   <input name="info" type="text" class="form-control"

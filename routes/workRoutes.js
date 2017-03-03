@@ -48,7 +48,13 @@ router.post("/create",upload.array('photos', 12), function(req, res, next) {
     info: req.body.info,
 	});
 
-  var list = [].concat( req.body.photos );
+      var list = [];
+
+    for (var i = 0; i < req.files.length; i++) {
+
+      list.push(req.files[i].filename);
+
+    }; 
 
     for (var i = 0; i < list.length; i++) {
       newWork.screenshots.push(list[i]);
@@ -78,12 +84,12 @@ router.post("/create",upload.array('photos', 12), function(req, res, next) {
 
 });
 
-router.get("/work/:name", ensureAuthenticated , function(req, res) {
+router.get("/work/:name" , function(req, res) {
 
   User.find().populate("works").exec(function(err,user){
     Work.findOne({ name: req.params.name }).exec(function(err,result){
       if (err) { return next(err); }
-     res.render("work",{ work: result ,user:result.username});
+     res.render("work",{ work: result , user: result.username});
 
     })
   }); 
@@ -123,19 +129,35 @@ function diff (a1, a2) {
     return diff;
 };
 
+
+
 router.post("/:name/update", upload.array('photos', 12), function(req, res) {
 
  Work.findOne({ name: req.params.name }).exec(function(err,result){
       result.name= req.body.name;
       result.info = req.body.info;
 
-      var list = [].concat( req.body.photos );
+      var list = [];
+
+
+
+
+
+    for (var i = 0; i < req.files.length; i++) {
+
+      list.push(req.files[i].filename);
+
+    }; 
+
+    
 
       
     for (var i = 0; i < list.length; i++) {
 
       result.screenshots.push(list[i]);
+
     };  
+
 
     result.save();
 
