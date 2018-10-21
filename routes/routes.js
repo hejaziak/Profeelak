@@ -112,6 +112,10 @@ router.get("/login", function(req, res) {
   res.render("login");
 });
 
+// Not used route added for personal reasons
+router.get("/What", function(req, res) {
+});
+
 router.post("/login", passport.authenticate("login", {
 successRedirect: "/page/1",
   failureRedirect: "/login",
